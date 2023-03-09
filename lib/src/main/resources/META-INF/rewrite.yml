@@ -1,0 +1,9 @@
+type: specs.openrewrite.org/v1beta/recipe
+name: pietschijven.openrewrite.lombok.IntroduceGetter
+recipeList:
+  - org.openrewrite.maven.AddDependency:
+      groupId: org.projectlombok
+      artifactId: lombok
+      version: 1.18.24
+  - org.openrewrite.java.cleanup.MultipleVariableDeclarations
+  - pietschijven.openrewrite.lombok.AddGetterAnnotations
